@@ -8,6 +8,10 @@ module.exports = {
     index: './src/index.js',
   },
 
+  devServer: {
+    static: './dist',
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
       title: 'A Restaurant Page',
