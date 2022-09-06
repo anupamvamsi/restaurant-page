@@ -23,17 +23,19 @@ function loadTabs() {
   DOMElements.content.appendChild(tabsContainer);
 }
 
-function loadHeadImg(image) {
-  const img = DOM.createEleAndAddAttributes(
-    'img',
-    ['src', image],
-    ['style', 'height: 20vh']
-  );
-  DOMElements.content.appendChild(img);
+function loadHeadImg(image, className) {
+  // const img = DOM.createEleAndAddAttributes(
+  //   'img',
+  //   ['src', image],
+  //   ['style', 'height: 20vh']
+  // );
+  const imgDiv = DOM.createEleAndAddClasses('div', className);
+  DOMElements.content.appendChild(imgDiv);
 }
 
 function loadHeading(tag, text) {
   const heading = DOM.createElementAndAddTextContent(tag, text);
+  heading.classList.add('heading');
 
   DOMElements.content.appendChild(heading);
 }
@@ -86,7 +88,6 @@ function getTabContent(e) {
 
 export function pageLoad() {
   loadTabs();
-  loadHeadImg(image);
   loadHeading('h1', 'Rant-And-Rest');
   loadIntro();
   loadTabEventListeners();
