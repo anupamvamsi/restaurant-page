@@ -1,6 +1,8 @@
 import DOMElements from './DOMElements';
 import DOM from './DOM';
 import * as tabHome from './tabHome';
+import * as tabExp from './tabExp';
+import * as tabBook from './tabBook';
 import image from './img/jason-leung-unsplash.jpg';
 
 function loadTabs() {
@@ -40,9 +42,52 @@ function loadIntro() {
   tabHome.loadContent();
 }
 
+function loadTabEventListeners() {
+  DOMElements.getElementOfSelector('.home').addEventListener(
+    'click',
+    getTabContent
+  );
+
+  DOMElements.getElementOfSelector('.experience').addEventListener(
+    'click',
+    getTabContent
+  );
+
+  DOMElements.getElementOfSelector('.book').addEventListener(
+    'click',
+    getTabContent
+  );
+}
+
+function clearTabContent() {
+  DOMElements.content.removeChild(
+    DOMElements.getElementOfSelector('.tabContent')
+  );
+}
+
+function getTabContent(e) {
+  clearTabContent();
+  const tab = e.target.className;
+
+  switch (tab) {
+    case 'home':
+      tabHome.loadContent();
+      break;
+
+    case 'experience':
+      tabExp.loadContent();
+      break;
+
+    case 'book':
+      tabBook.loadContent();
+      break;
+  }
+}
+
 export function pageLoad() {
   loadTabs();
   loadHeadImg(image);
   loadHeading('h1', 'Rant-And-Rest');
   loadIntro();
+  loadTabEventListeners();
 }
