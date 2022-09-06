@@ -6,7 +6,8 @@ module.exports = {
 
   entry: {
     index: './src/index.js',
-    load: './src/load.js',
+    // load: './src/load.js',
+    // DOMElements: './src/DOMElements.js',
   },
 
   // for webpack-dev-server
