@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -8,8 +7,6 @@ module.exports = {
 
   entry: {
     index: './src/index.js',
-    // load: './src/load.js',
-    // DOMElements: './src/DOMElements.js',
   },
 
   // for webpack-dev-server
@@ -45,10 +42,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'main.css',
     }),
-    // new HtmlWebpackTagsPlugin({
-    //   tags: ['./src/styles/style.css'],
-    //   append: true,
-    // }),
   ],
 
   output: {
