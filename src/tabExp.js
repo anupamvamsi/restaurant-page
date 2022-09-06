@@ -6,7 +6,7 @@ export function loadContent() {
 
   const para1 = document.createElement('p');
   para1.textContent =
-    'Welcome to Rant-And-Rest\u2122, a deviation from the usual concept of a Restaurant! Here, you can book a soundproof room where you can rant all you like, eat up one of our deliciously made breakfast food after, and rest!';
+    'An Experience Out Of This World\u2122 is the experience you will experience!';
 
   const para2 = document.createElement('p');
   para2.textContent +=
