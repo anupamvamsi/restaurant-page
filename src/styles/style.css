@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#content {
+  background-color: blue;
+}
+
+h1 {
+  color: red;
+}
