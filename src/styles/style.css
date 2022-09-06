@@ -4,10 +4,65 @@
   box-sizing: border-box;
 }
 
-#content {
-  background-color: blue;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  color: red;
+#content {
+  display: grid;
+  grid-template-rows: 0.1fr 0.1fr 0.3fr;
+
+  justify-items: center;
+  justify-content: center;
+
+  background-image: url('../img/jason-leung-unsplash.jpg');
+  background-position: 36% 64%;
+  height: 100vh;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+
+  gap: 1em;
+
+  width: 100vw;
+
+  opacity: 0.9;
+  background-color: rgb(252, 214, 220);
+}
+
+.tabs a {
+  text-align: center;
+
+  padding: 1em;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: hotpink;
+
+  width: 50%;
+  margin: 0;
+  margin-top: 4em;
+  padding: 1em;
+
+  opacity: 0.9;
+  background-color: rgb(252, 214, 220);
+}
+
+.tabContent {
+  text-align: justify;
+
+  width: 50%;
+  padding: 0em 2em;
+
+  opacity: 0.9;
+  background-color: rgb(252, 214, 220);
 }
