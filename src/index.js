@@ -1,4 +1,4 @@
 // https://unsplash.com/photos/poI7DelFiVA
-import { load } from './load';
+import * as Load from './load';
 
-load();
+Load.pageLoad();
